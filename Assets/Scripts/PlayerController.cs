@@ -25,15 +25,15 @@ public class PlayerController : MonoBehaviour
 	{
 		myTime+=Time.deltaTime;
 
-		if (Input.GetButtonDown("Fire1") && myTime>nextFire) {
-//			Debug.Log ("Button Down");
+		if (Input.GetButtonDown("Fire1") /*&& myTime>nextFire*/) {
+
 			//nextFire = Time.time + fireDelta;
-//			Debug.Log ("nextFire");
+
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
-//			Debug.Log ("Instatiate");
+
 			AudioSource audio = GetComponent<AudioSource> ();
 			audio.Play ();
-			myTime = 0;
+			//myTime = 0;
 		}
 
 	}
